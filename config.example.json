@@ -1,0 +1,91 @@
+{
+  "niches": [
+    "Motivational / Success Mindset",
+    "Facts & Mind-blowing Info",
+    "AI-narrated Short Stories / Reddit Stories",
+    "Finance / Side Hustles / Make Money",
+    "Psychology Hacks & Human Behavior",
+    "Top 10 Lists"
+  ],
+  "channels": [
+    {
+      "id": "channel_1",
+      "name": "Channel One",
+      "refreshToken": "",
+      "enabled": true,
+      "niches": ["Motivational / Success Mindset", "Finance / Side Hustles / Make Money"],
+      "dailyShortsTarget": 5,
+      "dailyLongsTarget": 1,
+      "watermark": "./assets/templates/watermark1.png"
+    }
+  ],
+  "schedules": {
+    "shorts": {
+      "timesPerDay": [
+        "08:00",
+        "12:00",
+        "16:00",
+        "20:00"
+      ]
+    },
+    "longs": {
+      "timesPerWeek": [
+        "Monday 10:00",
+        "Thursday 14:00"
+      ]
+    }
+  },
+  "contentSettings": {
+    "shortDuration": {
+      "min": 15,
+      "max": 60
+    },
+    "longDuration": {
+      "min": 300,
+      "max": 720
+    },
+    "voiceSettings": {
+      "openai": {
+        "model": "tts-1-hd",
+        "voice": "nova",
+        "speed": 1.0
+      },
+      "google": {
+        "languageCode": "en-US",
+        "name": "en-US-Neural2-F",
+        "speakingRate": 1.0
+      }
+    },
+    "videoSettings": {
+      "shorts": {
+        "width": 1080,
+        "height": 1920,
+        "fps": 30,
+        "bitrate": "2500k"
+      },
+      "longs": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "bitrate": "4000k"
+      }
+    }
+  },
+  "stockSources": [
+    {
+      "name": "Pexels",
+      "apiKey": "",
+      "enabled": false
+    },
+    {
+      "name": "Pixabay",
+      "apiKey": "",
+      "enabled": false
+    }
+  ],
+  "legal": {
+    "contentOriginCheck": true,
+    "requireManualApproval": false,
+    "maxDailyUploadsPerChannel": 50
+  }
+}

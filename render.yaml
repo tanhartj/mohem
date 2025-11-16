@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: youtube-automation-bot
+    env: node
+    region: oregon
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SCHEDULER_ENABLED
+        value: true
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: YT_CLIENT_ID
+        sync: false
+      - key: YT_CLIENT_SECRET
+        sync: false
+      - key: YT_REDIRECT_URI
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_ADMIN_IDS
+        sync: false
+      - key: PEXELS_API_KEY
+        sync: false
+      - key: PIXABAY_API_KEY
+        sync: false
+    disk:
+      name: bot-data
+      mountPath: /data
+      sizeGB: 1
+    autoDeploy: true
